@@ -13,13 +13,10 @@ def minimize():
     win.attributes("-fullscreen", False)
     win.geometry("1280x1100")
     win.resizable(False,True)
-
 def maximize():
     win.attributes("-fullscreen", True)
-
 def exit_window():
     win.destroy()    
-
 def get_cords(event):
     widget = event.widget
     widget.startX = event.x
@@ -32,8 +29,6 @@ def background_color():
     global b_color
     color = colorchooser.askcolor()
     b_color=color[1]
-
-
 def drag(event):
     widget = event.widget
     x = widget.winfo_x() - widget.startX + event.x   
@@ -62,7 +57,6 @@ def create_labels():
     font = Font_Size_Label.get()
     size = Font_Size_Label.get()
     font = Font_style_Label.get(ACTIVE)
-    print(font)
     label = Label(Plane_frame,bg=b_color,width=w_value,height=h_value,
                             fg=f_color,text=tex,font=(font,size))
     label.place(x=0,y=0)
@@ -102,15 +96,11 @@ def bar_line():
     global type_var
     type_var = BUTT
 
-
 def free_draw(event):
     global width_val
     x1,y1=(event.x-1), (event.y-1)
     x2,y2=(event.x+1), (event.y+1)
     Plane_frame.create_line(x1,y1,x2,y2,width=width_val,fill=color_val,capstyle=type_var,smooth=True)
-
-    
-  
 
 def create_vertical():
     height2= Line_Height.get()
@@ -174,7 +164,6 @@ type_var = ROUND
 #====================================front end===========================================
 win = Tk()
 win.attributes("-fullscreen", True)
-  
 #================================image files=============================================
 base1 = PhotoImage(file='img\\background\\panner_background.png') 
 base2 = PhotoImage(file='img\\buttons\\fill_color.png') 
@@ -188,12 +177,9 @@ base9 = PhotoImage(file='img\\buttons\\image_fill.png')
 base10 = PhotoImage(file='img\\buttons\\create_image.png')
 base11 = PhotoImage(file='img\\buttons\\line_color.png')
 base12 = PhotoImage(file='img\\buttons\\clear_line.png')
-
 base13 = PhotoImage(file='img\\buttons\\square_type.png')
 base14 = PhotoImage(file='img\\buttons\\circle_type.png')
 base21 = PhotoImage(file='img\\buttons\\bar_type.png')
-
-
 base15 = PhotoImage(file='img\\buttons\\minimize_main.png')
 base16 = PhotoImage(file='img\\buttons\\minimize_hover.png')
 base17 = PhotoImage(file='img\\buttons\\maximize_main.png')
@@ -224,7 +210,6 @@ highlightbackground="#343435",selectbackground="#cf59f2",selectborderwidth=0,
 fg="#f0f0f0",font=("Times New Roman",10))
 Font_style_Label.place(x=14,y=180)
 #==================================window frames=========================================
-
 
 
 #==================================font list=============================================
@@ -297,7 +282,8 @@ create_horizontal_line = Button(win,image=base7,border=0,bg="#343435",
 create_horizontal_line.place(x=960,y=945)
 
 brush_width = Scale(win,from_=1,to=300,width=10,length=250,fg="#f0f0f0",
-highlightthickness=0,border=0,orient=HORIZONTAL,bg="#343435",command=Line_width_change)
+            highlightthickness=0,border=0,orient=HORIZONTAL,bg="#343435",
+                                               command=Line_width_change)
 brush_width.place(x=360,y=900)
 
 line_color = Button(win,image=base11,border=0,bg="#343435",
