@@ -163,13 +163,7 @@ def get_saved_data():
     profile_picture.place(x=35,y=25)
     mainloop()
 
-
-
-
-
-
 #===================================Key info=============================================
-
 
 #=====================================Command functions==================================
 def minimize():
@@ -474,12 +468,8 @@ for i in rec:
      i[5]+"-"+i[6],i[8],
      i[9],i[10],i[7],i[11]
              ))
-
  val_count +=1
- print(i)
-
 conn.commit()
-
 conn.close() 
 
 product_out = tkinter.scrolledtext.ScrolledText(tab3,width=25,fg="#f0f0f0",border=0,height=12,bg="#242425",font=("arial",13))
