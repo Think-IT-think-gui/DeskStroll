@@ -128,7 +128,6 @@ def Bar_loading():
     currentsong = currentsong
     file_info =MP3(currentsong)
     file_info = file_info.info.length
-    print(file_info)
     Split_time = file_info/1000
     t = open("new.txt", "w")
     t.write(str(Split_time))
@@ -155,7 +154,6 @@ def Bar1_loading():
     currentsong = currentsong
     file_info =MP3(currentsong)
     file_info = file_info.info.length
-    print(file_info)
     Split_time = file_info/1000
     task_Legnth = 1000
     x = 0   
@@ -191,7 +189,6 @@ def Bar2_loading():
     currentsong = currentsong
     file_info =MP3(currentsong)
     file_info = file_info.info.length
-    print(file_info)
     Split_time = file_info/1000
     task_Legnth = 1000
     x = 0   
@@ -211,7 +208,6 @@ def Bar3_loading():
     currentsong = currentsong
     file_info =MP3(currentsong)
     file_info = file_info.info.length
-    print(file_info)
     Split_time = file_info/1000
     task_Legnth = 1000
     x = 0   
@@ -301,7 +297,6 @@ Main_win = Tk()
 Main_win.attributes("-fullscreen", True)
 mixer.init()
 songstatus=StringVar()
-#volume_sound = 0.9
 count =1 
 songstatus.set("choosing")
 #=====================================================================================
