@@ -15,10 +15,7 @@ class Make:
         print("active")
     def send(link):
         link = link
-        os.startfile(link)
-    
-    
-    
+        os.startfile(link)    
     def Child_files(name,link,color,frame):
         name = name
         link = link
@@ -38,7 +35,6 @@ class Make:
         list1 = [400,396,397,403,401,399,402]
         from_list1 = random.choice(list1)
         my_canvas.config(width=from_list1)
-        
         #==========================================
         if exten == "'mp3'" :
             name.config(image=base10)
@@ -110,7 +106,6 @@ class Make:
             name.config(image=base7)
         #==========================================    
 # chirld file assigner and generator  >>> 
-
 # chirld folder assigner  <<<          
 def create_folder_link(link):
     in_ent = link
@@ -122,14 +117,11 @@ def create_folder_link(link):
             i.destroy()
     Object_assign(in_ent,"green",frame)
 # chirld folder assigner  >>>    
-    
 # chirld folder generator  <<<           
 def Child_folders(link,name,color,frame):
         link = link
-        name = name
-        
-        if len(name) >=25:
-          
+        name = name       
+        if len(name) >=25:          
           name = name[0:21]     
         else:
             pass
@@ -143,8 +135,6 @@ def Child_folders(link,name,color,frame):
         list1 = [400,396,397,403,401,399,402]
         from_list1 = random.choice(list1)
         my_canvas.config(width=from_list1)
-
-
 # back adresses generator  <<<          
 def back():
     entry_info = ent.get()
@@ -154,9 +144,7 @@ def back():
     name_lent = len(exten)
     name_lent = int(name_lent) - 1
     frame = second_frame
-    print(exten)
     back_address = entry_info[0:-int(name_lent)] 
-    print(back_address)
     ent.delete(0,"end")
     ent.insert(0, back_address)  
     for i in second_frame.winfo_children():
@@ -184,7 +172,6 @@ def Object_assign(new_info,color,frame):
     for x in dirinfo:
         if os.path.isfile(in_ent+"\\"+x):
             Make.Child_files(x,in_ent+"\\"+x,color,frame)
-            
         else:
             Child_folders(in_ent+"\\"+x, x,color,frame)
 # file and dir diffrentiator >>>  
@@ -196,7 +183,6 @@ def minimize():
 
 def maximize():
     main_win.attributes("-fullscreen", True)
-
 def exit_window():
     main_win.destroy()    
 
@@ -206,10 +192,7 @@ class Make_2:
         print("active")
     def send(link):
         link = link
-        os.startfile(link)
-    
-    
-    
+        os.startfile(link)    
     def Child_files_2(name,link,color):
         name = name
         link = link
@@ -347,13 +330,9 @@ def back_2():
     entry_info = ent2.get()
     file_ex = entry_info.split("\\")
     exten = (repr(file_ex[-1])) 
-    
     name_lent = len(exten)
     name_lent = int(name_lent) - 1
-    
-    print(exten)
     back_address = entry_info[0:-int(name_lent)] 
-    print(back_address)
     ent2.delete(0,"end")
     ent2.insert(0, back_address)  
     for i in second1_frame.winfo_children():
