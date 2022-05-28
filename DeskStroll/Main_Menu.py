@@ -96,7 +96,14 @@ def on_leave_button3(e):
 
 #hover method <<<
 main_win = Tk()
-main_win.attributes("-fullscreen", True)
+main_win.title("DeskSroll")
+screen_info = Open("info_hig","r")
+screen_info = screen_info.read()
+if int(screen_info) == 1024:
+   main_win.geometry("1280x1024")
+else:   
+  main_win.attributes("-fullscreen", True)
+
 #==========================================================================
 #images imports <<<
 save1 = PhotoImage(file='img//background//background.png')
