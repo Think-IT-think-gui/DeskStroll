@@ -30,14 +30,23 @@ browser to perform it's functions.
 ======> Imports <=======
 
 tkinter 
+
 customtkinter
+
 PIL 
+
 tkinter.ttk
+
 threading
+
 time
+
 socket
+
 sqlite3
+
 random
+
 
 and more..........
 
